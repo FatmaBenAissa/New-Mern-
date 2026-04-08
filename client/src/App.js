@@ -14,7 +14,7 @@ function App() {
   const dispatch=useDispatch();
   const [ping, setping] = useState(false)
   useEffect(() => {
-    dispatch(getproducts())
+    dispatch(getproducts());
   }, [ping])
   
   return (

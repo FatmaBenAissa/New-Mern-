@@ -35,7 +35,7 @@ export const editproduct=createAsyncThunk("product/edit", async({id, edited})=>{
 });
 
 const initialState = {
-  productlist: [],
+  productlist:null,
   status:null
 }
 

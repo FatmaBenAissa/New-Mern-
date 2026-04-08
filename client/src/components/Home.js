@@ -16,9 +16,9 @@ function Home({ping, setping}) {
     <button onClick={()=>setcategory("homme")}>Male</button><button onClick={()=>setcategory("femme")} >Female</button>
   
     <div className='parent'>
-{category=="all"?products?.map((el)=><ProductCard el={el} ping={ping} setping={setping}/>):
+{category==="all"?products?.map((el)=><ProductCard el={el} ping={ping} setping={setping}/>):
 
-products?.filter((el)=>el.category==category && el.nameproduct.includes(text)).map((el)=><ProductCard el={el} ping={ping} setping={setping}/>)
+products?.filter((el)=>el.category===category && el.nameproduct.includes(text)).map((el)=><ProductCard el={el} ping={ping} setping={setping}/>)
 }
 
     </div>
