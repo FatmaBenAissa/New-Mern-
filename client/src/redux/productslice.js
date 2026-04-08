@@ -3,7 +3,7 @@ import axios from "axios";
 
 export const getproducts=createAsyncThunk("product/get", async()=>{
     try {
-        let result=axios.get("http://localhost:5000/product");
+        let result=axios.get("https://new-mern-alpha.vercel.app/product");
         return result
     } catch (error) {
         console.log(error)
@@ -11,7 +11,7 @@ export const getproducts=createAsyncThunk("product/get", async()=>{
 });
 export const deleteproduct=createAsyncThunk("product/delete", async(id)=>{
     try {
-        let result=axios.delete(`http://localhost:5000/product/${id}`);
+        let result=axios.delete(`https://new-mern-alpha.vercel.app/product/${id}`);
         return result
     } catch (error) {
         console.log(error)
@@ -19,7 +19,7 @@ export const deleteproduct=createAsyncThunk("product/delete", async(id)=>{
 });
 export const addproduct=createAsyncThunk("product/add", async(newproduct)=>{
     try {
-        let result=axios.post("http://localhost:5000/product/add", newproduct);
+        let result=axios.post("https://new-mern-alpha.vercel.app/product/add", newproduct);
         return result
     } catch (error) {
         console.log(error)
@@ -27,7 +27,7 @@ export const addproduct=createAsyncThunk("product/add", async(newproduct)=>{
 });
 export const editproduct=createAsyncThunk("product/edit", async({id, edited})=>{
     try {
-        let result=axios.put(`http://localhost:5000/product/${id}`,edited);
+        let result=axios.put(`https://new-mern-alpha.vercel.app/product/${id}`,edited);
         return result
     } catch (error) {
         console.log(error)
