@@ -15,7 +15,7 @@ function App() {
   const [ping, setping] = useState(false)
   useEffect(() => {
     dispatch(getproducts());
-  }, [ping])
+  }, [ping, dispatch])
   
   return (
     <div className="App">
